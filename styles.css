@@ -14,10 +14,25 @@ body {
     padding-top: 60px; /* For fixed header */
 }
 
-/* Header and Navigation */
-header {
+body.dark-theme {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+body.light-theme {
+    background: linear-gradient(to left, #0033cc, #00bfae);
+    color: #ffffff;
+}
+body.dark-theme header{
     background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black background */
     color: #fff;
+}
+body.light-theme header{
+    background: linear-gradient(to right , aquamarine , blue);
+    color : #ffffff;
+}
+
+header {
+    
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -41,19 +56,26 @@ nav {
 .menu li {
     margin: 0 15px;
 }
-
+body.dark-theme .menu a{
+    color:#fff;
+}
+body.light-theme .menu a{
+    color:#e0ffff;
+}
 .menu a {
-    color: #fff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
 }
 
-.menu a:hover {
+body.dark-theme .menu a:hover {
     color: black;
     background-color: white;
 }
-
+body.light-theme .menu a:hover {
+    color: white;
+    background-color: black;
+}
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -115,11 +137,17 @@ nav {
 }
 
 /* Hero Section */
+body.dark-theme .hero{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+}
+body.light-theme .hero{
+    color: black;
+    background: linear-gradient(to right , aquamarine , blue);
+}
 .hero {
     text-align: center;
     padding: 100px 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
     position: relative;
 }
 
@@ -134,10 +162,15 @@ nav {
     font-size: 20px;
     font-weight: bold;
 }
-
-.hero .cta {
+body.dark-theme .hero .cta{
     background: #fff;
     color: #000;
+}
+body.light-theme .hero .cta{
+    background: linear-gradient(to right ,lightblue, blue );
+    color: black ;
+}
+.hero .cta {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -209,6 +242,9 @@ nav {
     margin-bottom: 20px;
 }
 
+#highlights p {
+    font-size: 1.2em;
+}
 .project-teasers {
     display: flex;
     justify-content: space-around;
@@ -219,7 +255,7 @@ nav {
     width: 30%;
     background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     text-align:center;
@@ -290,14 +326,21 @@ nav {
 #contact-info p {
     font-size: 1.2em;
 }
-#contact-info a {
+body.dark-theme #contact-info a{
     color: aquamarine;
 }
-
-/* Footer */
-footer {
+body.light-theme #contact-info a{
+    color: aqua ;
+}
+body.dark-theme footer{
     background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black background */
     color: #fff;
+}
+body.light-theme footer{
+    background: linear-gradient(to right , aquamarine , blue);
+    color: #ffffff;
+}
+footer {
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -317,10 +360,15 @@ footer {
     z-index: -1;
 }
 
+body.dark-theme .dot{
+    background-color: #fff;
+}
+body.light-theme .dot{
+    background-color: blue;
+}
 .dot {
     position: absolute;
     border-radius: 50%;
-    background-color: #fff;
     opacity: 0.8;
     animation: moveDots 5s linear infinite;
 }
@@ -342,7 +390,12 @@ footer {
         transform: translateX(0) translateY(0);
     }
 }
-/* About Me Section */
+body.dark-theme .abouts-container {
+    background-color: #000;
+}
+body.light-theme .abouts-container {
+    background: linear-gradient(to left, #0033cc, #00bfae);
+}
 .abouts-container {
     display: flex;
     align-items: center;
@@ -350,7 +403,6 @@ footer {
     flex-wrap: wrap;
     padding: 40px 20px;
     margin: 20px;
-    background: black; /* Slightly transparent white background */
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -396,7 +448,12 @@ footer {
     position: relative;
     font-size: large;
 }
-
+body.dark-theme .content-container a{
+    color: aquamarine;
+}
+body.light-theme .content-container a{
+    color: aqua;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .abouts-container {
@@ -420,11 +477,16 @@ footer {
 .content-container ul {
     list-style: none;
 }
+body.dark-theme .hero1{
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+}
+body.light-theme .hero1{
+    background: linear-gradient(to left, #0033cc, #00bfae);
+}
 .hero1 {
     text-align: center;
     padding: 100px 20px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
     position: relative;
 }
 
@@ -676,4 +738,45 @@ footer {
 
 .hidden {
     display: none;
+}
+#modeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to right, #ffcc00, #3333cc);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#modeToggle::before {
+    content: '☀';
+    position: absolute;
+    left: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    transition: left 0.3s, transform 0.3s;
+}
+
+#modeToggle::after {
+    content: '🌙';
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    transition: right 0.3s, transform 0.3s;
+}
+
+body.dark-theme #modeToggle::before {
+    left: 35px;
+    transform: scale(0.8);
+}
+
+body.dark-theme #modeToggle::after {
+    right: 35px;
+    transform: scale(1.2);
 }
