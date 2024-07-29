@@ -142,7 +142,7 @@ body.dark-theme .hero{
     background: rgba(0, 0, 0, 0.8);
 }
 body.light-theme .hero{
-    color: black;
+    color: white;
     background: linear-gradient(to right , aquamarine , blue);
 }
 .hero {
@@ -168,7 +168,7 @@ body.dark-theme .hero .cta{
 }
 body.light-theme .hero .cta{
     background: linear-gradient(to right ,lightblue, blue );
-    color: black ;
+    color: white ;
 }
 .hero .cta {
     padding: 10px 20px;
@@ -779,4 +779,90 @@ body.dark-theme #modeToggle::before {
 body.dark-theme #modeToggle::after {
     right: 35px;
     transform: scale(1.2);
+}
+body.dark-theme #blog{
+    padding: 50px 20px;
+    background-color: #000;
+}
+body.light-theme #blog {
+    padding: 50px 20px;
+    background:  linear-gradient(to left, #0033cc, #00bfae);
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+body.dark-theme .blog-post{
+    background:  rgba(255, 255, 255, 0.1);
+}
+body.light-theme .blog-post{
+    background-color: darkblue;
+}
+.blog-post {
+    
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.blog-post p {
+    font-size: 1.1em;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.container2 {
+    max-width: 1130px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: whitesmoke;
+    font-size: 1.2em;
+    line-height: 35px;
+}
+.container2 h1, h2 {
+    color: white;
+}
+.container2 p {
+    color: white;
+}
+.container2 .quote {
+    font-style: italic;
+    color: #e9e4e4;
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    .container2 h1 {
+        font-size: xx-large;
+    }
+    .container2 img {
+        width: 320px;
+        height: auto;
+    }
 }
