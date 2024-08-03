@@ -846,6 +846,12 @@ body.light-theme .blog-post{
     font-size: 1.2em;
     line-height: 35px;
 }
+body.dark-theme .container2 a{
+    color: aquamarine;
+}
+body.light-theme .container2 a{
+    color: aqua;
+}
 .container2 h1, h2 {
     color: white;
 }
