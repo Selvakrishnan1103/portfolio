@@ -835,6 +835,12 @@ body.light-theme .blog-post{
     border-radius: 5px;
     margin-bottom: 15px;
 }
+body.dark-theme .container2 a{
+    color: aquamarine;
+}
+body.light-theme .container2 a{
+    color: aqua;
+}
 .container2 {
     max-width: 1130px;
     margin: auto;
@@ -845,12 +851,6 @@ body.light-theme .blog-post{
     color: whitesmoke;
     font-size: 1.2em;
     line-height: 35px;
-}
-body.dark-theme .container2 a{
-    color: aquamarine;
-}
-body.light-theme .container2 a{
-    color: aqua;
 }
 .container2 h1, h2 {
     color: white;
